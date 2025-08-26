@@ -3,11 +3,10 @@ provider "aws" {
 }
 
 terraform {
-  backend "s3" {
-    bucket         = "my-terraform-state-bucket"
-    key            = "devops-project/terraform.tfstate"
+backend "s3" {
+    bucket         = "terraform-state-abdulhannan-lahore"
+    key            = "terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "terraform-locks"
-    encrypt        = true
   }
+
 }
