@@ -1,4 +1,3 @@
-#terraform.yml file
 name: Terraform Deploy
 
 on:
