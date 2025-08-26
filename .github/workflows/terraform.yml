@@ -11,7 +11,7 @@ on:
 
 jobs:
   terraform:
-    name: Terraform Apply
+    name: Terraform destroy
     runs-on: ubuntu-latest
 
     env:
@@ -38,5 +38,5 @@ jobs:
     - name: Terraform Plan
       run: terraform plan -out=tfplan
 
-    - name: Terraform Apply
-      run: terraform apply -auto-approve tfplan
+    - name: Terraform  destroy
+      run: terraform destroy
