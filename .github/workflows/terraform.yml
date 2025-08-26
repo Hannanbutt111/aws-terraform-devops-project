@@ -34,12 +34,9 @@ jobs:
         aws-region: ${{ env.AWS_REGION }}
 
     - name: Terraform Init
-      working-directory: ./aws-terraform-devops-project
       run: terraform init
     - name: Terraform Plan
-      working-directory: ./aws-terraform-devops-project
       run: terraform plan -out=tfplan
 
     - name: Terraform Apply
-      working-directory: ./aws-terraform-devops-project
       run: terraform apply -auto-approve tfplan
